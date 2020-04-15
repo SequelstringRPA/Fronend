@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Seqelstring RPA Tool(create folder)</title>
+  <title>Seqelstring RPA Tool(convert any(text/ jpg/ docx) to pdf)</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/pop-up.css">
@@ -19,7 +19,7 @@
         <div class="contact-form">
           <a class="close">&times;</a>
 
-           <div class="tab">
+          <div class="tab">
               <button class="tablinks" onclick="openCity(event, '1')">General</button>
               <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
             </div>
@@ -27,34 +27,38 @@
           <form action="/">
             <div class="tooltip">
             <i class="fa fa-info-circle">
-              <span class="tooltiptext">It will create Folder</span>
+              <span class="tooltiptext">It will convert any(text/ jpg/ docx) file to pdf</span>
             </i>
             </div>
-            <h2 style="margin: -30px 0 10px;">Create Folder</h2>
+            <h2 style="margin: -30px 0 10px;">Convert Any File to PDF</h2>
+
+            
 
             <div>
               <div id="1" class="tabcontent">
                 <div>
                   <h1>Action Input</h1>
-                  <div class="tooltip">
-                    <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Enter the location where folder will be created</span>
-                    </i>
-                  </div>
-
-                  <label style="position: relative;left: -4%;"><b>Enter Folder Path</b></label>
-
-                   <input type="file">
+                  
                   
                   <div class="tooltip">
                     <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Enter the name of folder</span>
+                      <span class="tooltiptext">Enter the location of any(text/ jpg/ docx) to be converted</span>
                     </i>
                   </div>
 
-                  <label style="position: relative;left: -4%;"><b>Enter Folder Name</b></label>
+                  <label style="position: relative;left: -4%;"><b>Enter Source File Path</b></label>
 
-                   <input type="text">
+                   <input type="file">
+
+                    <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where new PDF file will be stored</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
+
+                   <input type="file">
 
 
 
@@ -87,11 +91,6 @@
 
                   <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
                   <input type="text">
-
-                   <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
-                  <input type="text">
-
-
 
                   </div>
                   
