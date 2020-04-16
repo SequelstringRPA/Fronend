@@ -1,0 +1,30 @@
+<head>
+
+  <title>Seqelstring RPA Tool(file exists dialog box)</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="alertcss/demo.css">
+ 
+
+</head>
+
+<dialog id="Dialog">
+<a id="close">&times;</a>
+<h2 align="center">Alert!</h2>
+
+<p align="center">File arleady exists in destination path</p>
+
+</dialog>
+<button id="showDialog">Show Dialog</button>
+
+<script type="text/javascript">
+	(function() {  
+ 	var dialog = document.getElementById('Dialog');
+document.getElementById('showDialog').onclick = function() {  
+dialog.show();  
+};  
+document.getElementById('close').onclick = function() {  
+dialog.close();  
+};
+})();
+</script>
