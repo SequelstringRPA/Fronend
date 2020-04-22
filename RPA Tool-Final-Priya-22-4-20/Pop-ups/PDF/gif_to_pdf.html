@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Seqelstring RPA Tool</title>
+  <title>Seqelstring RPA Tool(convert gif to pdf)</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/pop-up.css">
+  <link rel="stylesheet" type="text/css" href="css/pop-up.css">
 </head>
   <body>
     <p>
@@ -18,73 +18,66 @@
       <div class="modal-content">
         <div class="contact-form">
           <a class="close">&times;</a>
-            <div class="tab">
+
+          <div class="tab">
               <button class="tablinks" onclick="openCity(event, '1')">General</button>
               <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
-            </div>     
+            </div>
+                 
           <form action="/">
             <div class="tooltip">
             <i class="fa fa-info-circle">
-              <span class="tooltiptext">It will add a new page in existing pdf file.</span>
+              <span class="tooltiptext">It will convert gif file to pdf</span>
             </i>
             </div>
-            <h2 style="margin: -30px 0 10px;">Insert New Page in PDF</h2>
+            <h2 style="margin: -30px 0 10px;">Convert GIF to PDF</h2>
+
+            
 
             <div>
               <div id="1" class="tabcontent">
                 <div>
                   <h1>Action Input</h1>
+                  
+                  
                   <div class="tooltip">
                     <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Enter the input path of file</span>
+                      <span class="tooltiptext">Enter the location of GIF file to be converted</span>
                     </i>
                   </div>
 
-                  <label style="position: relative;left: -4%;"><b>Enter Source PDF Path</b></label>
-                  <input type="file" list="browsers" name="browser" multiple>
+                  <label style="position: relative;left: -4%;"><b>Enter Source Gif Path</b></label>
 
-                  <div class="tooltip">
+                   <input type="file">
+
+                    <div class="tooltip">
                     <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Enter index of page to be added</span>
+                      <span class="tooltiptext">Enter the location where new PDF file will be stored</span>
                     </i>
                   </div>
 
-                  <label style="position: relative;left: -4%;"><b>Enter Page Index</b></label>
-                  <input type="number" list="browsers" name="browser" multiple>
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
 
-                  <div class="tooltip">
-                    <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Enter text to add in pdf.</span>
-                    </i>
-                  </div>
+                   <input type="file">
 
-                  <label style="position: relative;left: -4%;"><b>Enter Text (optional)</b></label>
-                  <input type="text" list="browsers" name="browser" multiple>
 
-                  <div class="tooltip">
-                    <i class="fa fa-info-circle">
-                      <span class="tooltiptext">Select the location of output file.</span>
-                    </i>
-                  </div>
 
-                  <label style="position: relative;left: -4%;"><b>Enter Destination PDF Path</b></label>
-                  <input type="file" list="browsers" name="browser" multiple>
-
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                </div>
                 <div>
                   <h1>Action Output</h1>
                   <div class="tooltip">
                           <i class="fa fa-info-circle">
-                            <span class="tooltiptext">It will insert new page</span>
+                            <span class="tooltiptext">Intermediate variable</span>
                           </i>
                   </div>
-
-                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
                   <input type="text" name="psw">
-
                   <input type="checkbox" name="vehicle1" style="width: 10%;">
-                  <label><b>This Action is Enable</b></label><br>
+                  <label > <b>This Action is Enable</b></label><br>
 
-                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
                   <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
                 </div>
               </div>
@@ -99,13 +92,7 @@
                   <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
                   <input type="text">
 
-                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
-                  <input type="text">
-
-                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
-                  <input type="text">
-
-                </div>
+                  </div>
                   
                   <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
                 </div>
