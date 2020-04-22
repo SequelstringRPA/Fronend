@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+
+	  <title>Seqelstring RPA Tool</title>
+
+	  <script src="JQuery/jquery.min.js"></script>
+
+	  <!-- Direct network link/ Internet necessary -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+	  <link rel="stylesheet" href="JQuery/jquery-ui.css">
+	  <link rel="stylesheet" href="css/tool_page.css">
+	  <link rel="stylesheet" type="text/css" href="C:\Users\ADMIN\Desktop\RPA Tool-Final-Priya-22-4-20\Pop-ups\css\pop-up.css">
+	  <style>
+	  #droppable { width: 150px; height: 150px; padding: 0.5em; float: none; margin: 10px; }
+	  </style>
+</head>
+<body>
+	<div class="flex-container">
+		<div id="droppable" class="ui-widget-header drag-n-drop-div" style="width:80% ; height: 80vh; border: solid 1px; margin-top:97px; position: relative;">
+		  	<!-- <p>Drop here</p> -->
+	  	</div>
+		<div class="column_right">
+			<ul>
+				<!-- CATEGORY HEAD -->
+				<a href="#" class="column_links dropdown-btn" data-modal="modalOne"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">Excel</a>
+				<!-- DROPDOWN CONTAINER -->
+					<div class="dropdown-container">
+						<!-- FUNCTIONALITIES -->
+			        	<a href="#" class="drag-drop button_filter"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Filter Excel</a>
+			        	<a href="#" class="drag-drop button_maxcolumn"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Max Column</a>
+			        	<a href="#" class="drag-drop button_maxrow"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Max Row</a>
+			        	<a href="#" class="drag-drop button_vlookupsamesheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Vlookup on same excel</a>
+			        	<a href="#" class="drag-drop button_copy_data_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Copy data from one sheet to another</a>
+			        	<a href="#" class="drag-drop button_roundoff_column"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Roundoff values of columns</a>
+			        	<a href="#" class="drag-drop button_remove_duplicate"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Remove duplicates</a>
+			        	<a href="#" class="drag-drop button_password"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Password</a>
+			        	<a href="#" class="drag-drop button_sum_if"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Sum If</a>
+			        	<a href="#" class="drag-drop button_pivot_table"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Pivot table</a>
+			        	<a href="#" class="drag-drop button_paste_special"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Paste special</a>
+			        	<a href="#" class="drag-drop button_move_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Move excel</a>
+			        	<a href="#" class="drag-drop button_create_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Create sheet</a>
+			        	<a href="#" class="drag-drop button_del_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete sheet</a>
+			          
+        			</div> 
+    			<!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">SAP</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">E-mail</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">PDF</a>
+			    <!-- DROPDOWN CONTAINER -->
+					<div class="dropdown-container">
+				 <!--Functionalities -->
+			            <a href="#" class="drag-drop button_create_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Create PDF</a>
+			            <a href="#" class="drag-drop button_split_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Split PDF</a>
+			            <a href="#" class="drag-drop button_concatenate_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Concatenate PDF</a>
+			            <a href="#" class="drag-drop button_insert_newpage_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Insert New Page</a>
+			            <a href="#" class="drag-drop button_insert_existingpage_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Insert Existing Page</a>
+			            <a href="#" class="drag-drop button_encrypt_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Encrypt PDF</a>
+			            <a href="#" class="drag-drop button_decrypt_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Decrypt PDF</a>
+			            <a href="#" class="drag-drop button_extract_image_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Extract Image from PDF</a>
+			            <a href="#" class="drag-drop button_extract_text_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Extract Text from PDF </a>
+			            <a href="#" class="drag-drop button_extract_text_ocr_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Extract Text from PDF using OCR </a>
+			            <a href="#" class="drag-drop button_extract_page_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Extract Pages from PDF</a>
+			            <a href="#" class="drag-drop button_any_to_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert Any File to PDF</a>
+			            <a href="#" class="drag-drop button_word_to_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert Word File to PDF</a>
+			            <a href="#" class="drag-drop button_excel_to_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert Excel File to PDF</a>
+			            <a href="#" class="drag-drop button_gif_to_pdf"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert GIF File to PDF</a>
+			            <a href="#" class="drag-drop button_pdf_to_word"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert PDF to Word</a>
+			            <a href="#" class="drag-drop button_pdf_to_excel"><img src="assets/pdf_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert PDF File to Excel</a>
+
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">Files</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">FTP</a>
+		    </ul>
+		</div>
+	</div>
+
+	<div class="popup">
+		<div id="modalOne_filter_any_to_pdf" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	            <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will filter the inputs in the column specified by the user.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Filter</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value to be filtered.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter value to filter</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the column number.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter the column number</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store Instant</b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	              </div>
+	            </div>
+	          </div>
+	        </form>
+	        </div>
+	      </div>
+	    </div>
+		<div id="modalOne_maxcolumn" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	          <div class="tab">
+	            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	          </div>
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will give max columns.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Max Column</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">It will give max columns.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+	                   <input type="text" list="browsers" name="browser">
+
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>s
+	    </div>
+	    <div id="modalOne_maxrow" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	          <div class="tab">
+	            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	          </div>       
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will give max rows.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Max Row</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">It will give max rows.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+	                   <input type="text" list="browsers" name="browser">
+
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_vlookupsamesheet" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	            <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>     
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will provide vlookup on same excel file.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Vlookup on same Excel file</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value to searched</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter value to searched</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the range to searched</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter range to searched</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value index</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter value index</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+
+	                  
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+	                  <input type="text">
+
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_copy_data_sheet" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	          
+	          <div class="tab">
+	            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	          </div>
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will copy data from one excel sheet to another excel sheet.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Copy data from one excel sheet to another</h2>
+
+	            
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the source from where the content is to be copied.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Source Sheet Name</b></label>
+	                   <input type="text" list="browsers" name="browser">
+
+	                   <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the destination where the content is to be pasted.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Destination Sheet Name</b></label>
+	                   <input type="text" list="browsers" name="browser">
+
+	                   <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the cell range from where the data is to be selected.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Cell Range</b></label>
+	                   <input type="text" list="browsers" name="browser">
+
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_roundoff_column" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	          <div class="tab">
+	            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	          </div>
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will round off values of a column.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Round off values of column</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the column number to round off.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter column number</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the decimal number to round off.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter decimal place</b></label>
+	                  <input type="text" list="browsers" name="browser">
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	              </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_remove_duplicate" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	           <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will remove duplicate values of a column.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Remove duplicate</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the column number to remove duplicate.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter column number</b></label>
+	                  <input type="text" list="browsers" name="browser">
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	              </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_password" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	           
+	          <div class="tab">
+	            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	          </div>
+
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will hash the password.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Password</h2>
+
+	            
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the keyword for hashing.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter keyword for hashsing</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the decimal number to round off.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter password</b></label>
+	                  <input type="text" list="browsers" name="browser">
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+	                  
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	              </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_sum_if" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	            <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>     
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will provide values to calculate sum if.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Sum if</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value to cell where sum if initializes.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter position of start cell</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value to cell where sum if ends.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter position of end cell</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value of output cell</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter position of output cell</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+
+	                  
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 5</b></label>
+	                  <input type="text">
+
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_pivot_table" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	            <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>     
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will provide values to create pivot table.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Pivot table</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value for column name.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter value as column name</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the value of index as column name.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter index as column name</b></label>
+	                  <input type="text" list="browsers" name="browser">
+	                          
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+	                  <input type="text">
+
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_paste_special" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+	            <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>     
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will do paste special on mentioned sheet.</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Paste special</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the position of sheet.</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Sheet number</b></label>
+	                  <input type="text" list="browsers" name="browser">
+
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">It will Open the Excel File</span>
+	                          </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+	                  <input type="text" name="psw">
+
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label><b>This Action is Enable</b></label><br>
+
+	                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_move_excel" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	           <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>
+	                 
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will Move the Excel File</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Move Excel</h2>
+
+	           
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the current location of excel sheet</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Current Excel Path</b></label>
+
+	                   <input type="file">
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the new location of excel sheet</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter New Excel Path </b></label>
+	                  <input type="file">
+
+	                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>Make Instance Invisible</b></label><br>
+	                </div>
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">Intermediate variable</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_create_sheet" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	          <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>
+	                 
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It will create the sheet in excel file</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Create Sheet</h2>
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the name of sheet</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+
+	                   <input type="text">
+
+	                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>Make Instance Invisible</b></label><br>
+	                </div>
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">Intermediate variable</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+
+	                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+	                  <input type="text">
+
+	                  </div>
+	                  
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+	    <div id="modalOne_del_sheet" class="modal">
+	      <div class="modal-content">
+	        <div class="contact-form">
+	          <a class="close">&times;</a>
+
+	          <div class="tab">
+	              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+	              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+	            </div>
+	                 
+	          <form action="/">
+	            <div class="tooltip">
+	            <i class="fa fa-info-circle">
+	              <span class="tooltiptext">It deletes sheet from excel</span>
+	            </i>
+	            </div>
+	            <h2 style="margin: -30px 0 10px;">Delete Sheet</h2>
+
+	            
+
+	            <div>
+	              <div class="1" class="tabcontent">
+	                <div>
+	                  <h1>Action Input</h1>
+	                  <div class="tooltip">
+	                    <i class="fa fa-info-circle">
+	                      <span class="tooltiptext">Enter the name of sheet to be deleted</span>
+	                    </i>
+	                  </div>
+
+	                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+	                   <input type="text">
+	                  
+
+	                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>Make Instance Invisible</b></label><br>
+	                </div>
+	                <div>
+	                  <h1>Action Output</h1>
+	                  <div class="tooltip">
+	                          <i class="fa fa-info-circle">
+	                            <span class="tooltiptext">Intermediate variable</span>
+	                          </i>
+	                  </div>
+	                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+	                  <input type="text" name="psw">
+	                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+	                  <label > <b>This Action is Enable</b></label><br>
+
+	                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+
+	            <div>
+	              <div class="2" class="tabcontent">
+	                <div>
+	            
+	                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+	                  <input type="text">
+	                   
+	                </div>
+	                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+	                </div>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- create pdf -->
+	    <div id="modalOne_create_pdf" class="modal">
+           <div class="modal-content">
+             <div class="contact-form">
+                <a class="close">&times;</a>
+
+                <div class="tab">
+                  <button class="tablinks" onclick="openCity(event, '1')">General</button>
+                  <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+                </div>
+                 
+                <form action="/">
+                   <div class="tooltip">
+                     <i class="fa fa-info-circle">
+                     <span class="tooltiptext">It will create PDF file</span>
+                     </i>
+                   </div>
+                <h2 style="margin: -30px 0 10px;">Create PDF</h2>
+
+                   <div>
+                       <div class="1" class="tabcontent">
+                          <div>
+                            <h1>Action Input</h1>
+                               <div class="tooltip">
+                                 <i class="fa fa-info-circle">
+                                 <span class="tooltiptext">Enter the location where PDF will be created</span>
+                                 </i>
+                               </div>
+
+                               <label style="position: relative;left: -4%;"><b>Enter PDF Path</b></label>
+                               <input type="file">
+                  
+                               <div class="tooltip">
+                                 <i class="fa fa-info-circle">
+                                 <span class="tooltiptext">Enter the name of PDF</span>
+                                 </i>
+                               </div>
+
+                                <label style="position: relative;left: -4%;"><b>Enter PDF Name</b></label>
+                                <input type="text">
+
+                               <div class="tooltip">
+                                 <i class="fa fa-info-circle">
+                                 <span class="tooltiptext">Enter the text for pdf file</span>
+                                 </i>
+                               </div>
+
+                                <label style="position: relative;left: -4%;"><b>EnterText</b></label>
+                                <input type="text">
+
+                                <input type="checkbox" name="vehicle1" style="width: 10%;">
+                                <label > <b>Make Instance Invisible</b></label><br>
+                        </div>
+                
+                    <div>
+                      <h1>Action Output</h1>
+                         <div class="tooltip">
+                           <i class="fa fa-info-circle">
+                           <span class="tooltiptext">Intermediate variable</span>
+                           </i>
+                    </div>
+                    <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                    <input type="text" name="psw">
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                    <label > <b>This Action is Enable</b></label><br>
+
+                    <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                   </div>
+              </div>
+           </div>
+	  </div>
+	 
+	  <div>
+          <div class="2" class="tabcontent">
+              <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                   <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+               </div>                 
+                    <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                    </div>
+                 </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- split pdf -->
+    <div id="modalOne_split_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will split the PDF files and store them in location provided.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Split PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                    <div class="tooltip">
+                      <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the pdf file to split.</span>
+                      </i>
+                    </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Source File</b></label>
+                  <input type="file" >
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Destination file</b></label>
+                  <input type="file">
+
+                    <div>
+                    <h1>Action Output</h1>
+                      <div class="tooltip">
+                        <i class="fa fa-info-circle">
+                        <span class="tooltiptext">It will Open the File</span>
+                        </i>
+                      </div>
+
+                    <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                    <input type="text" name="psw"> 
+
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                    <label><b>This Action is Enable</b></label><br>
+
+                    <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                    </div>
+                 </div>
+              </div>
+
+              <div>
+               <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+
+                </div>  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalOne" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will concatenate multiple PDF files.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Concatenate PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select first pdf file which is to be merged.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select First PDF</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select second pdf file which is to be merged.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Second PDF</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Destination PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will concatenate PDF Files</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+
+                </div>
+                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- concatenate pdf -->
+
+    <div id="modalOne_concatenate_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will concatenate multiple PDF files.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Concatenate PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select first pdf file which is to be merged.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select First PDF</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select second pdf file which is to be merged.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Second PDF</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Select Destination PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will concatenate PDF Files</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+
+                </div>
+                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  <!-- insert new page in pdf -->
+  <div id="modalOne_insert_newpage_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will add a new page in existing pdf file.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Insert New Page in PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the input path of file</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Source PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter index of page to be added</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Page Index</b></label>
+                  <input type="number">
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter text to add in pdf.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Text (optional)</b></label>
+                  <input type="text" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destination PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will insert new page</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+
+                </div>
+                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- insert existing page in pdf -->
+<div id="modalOne_insert_existingpage_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will add an existing pdf page in existing pdf file.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Insert Existing Page in PDF</h2>
+
+            <div>
+              <div id="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Mention the input PDF path.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter the Source PDF path/b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Path of existing pdf page to add.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Existing PDF Page</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destination PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will insert page</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div id="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+                </div>            
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- encryprt pdf -->
+    <div id="modalOne_encrypt_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+            <form action="/">
+             <div class="tooltip">
+             <i class="fa fa-info-circle">
+             <span class="tooltiptext">It will encrypt the existing pdf with password.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Encrypt PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Mention the input path.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Source PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destination PDF path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                   <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Password to encrypt the pdf.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Password</b></label>
+                  <input type="password" list="browsers" name="browser">
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will Encrypt</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+                </div>                 
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+ <!-- decrypt pdf -->
+ <div id="modalOne_decrypt_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will decrypt the existing pdf encrypted with password.</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Decrypt PDF</h2>
+
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Mention the input path.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Source PDF path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Select the location of output file.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destnation PDF Path</b></label>
+                  <input type="file" list="browsers" name="browser" multiple>
+
+                   <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Password to decrypt the pdf.</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Password</b></label>
+                  <input type="password" list="browsers" name="browser">
+
+
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">It will Decrypt the File</span>
+                          </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+                  <input type="text" name="psw">
+
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label><b>This Action is Enable</b></label><br>
+
+                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+                  <input type="text">
+
+                </div>
+                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+   <!-- extract image from pdf -->
+   <div id="modalOne_extract_image_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+          </div>
+                 
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will extract image from pdf</span>
+              </i>
+              </div>
+            <h2 style="margin: -30px 0 10px;">Extract Image from PDF</h2>
+          
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of pdf file containing image</span>
+                    </i>
+                  </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Source Pdf Path</b></label>
+                  <input type="file">
+
+                    <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of output image</span>
+                    </i>
+                    </div>
+
+                    <label style="position: relative;left: -4%;"><b>Enter Destination Image Path </b></label>
+                    <input type="file">
+
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                </div>
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">Intermediate variable</span>
+                          </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+
+                  </div>
+                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- extract text from pdf -->
+    <div id="modalOne_extract_text_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>     
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will extract text from pdf</span>
+              </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Extract Text from PDF</h2>
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of pdf file containing text to be extracted</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Source Pdf Path</b></label>
+                  <input type="file">
+                    <div class="tooltip">
+                      <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where output file will be stored</span>
+                    </i>
+                    </div>
+
+                  <label style="position: relative;left: -4%;"><b>Enter Destination File Path </b></label>
+                  <input type="file">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                  </div>
+                    <div>
+                     <h1>Action Output</h1>
+                       <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                          <span class="tooltiptext">Intermediate variable</span>
+                          </i>
+                       </div>
+                       <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                       <input type="text" name="psw">
+                       <input type="checkbox" name="vehicle1" style="width: 10%;">
+                       <label > <b>This Action is Enable</b></label><br>
+                       <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                       <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                    </div>
+              </div>
+            </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                </div>                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+ <!-- extract text from pdf using ocr -->
+ <div id="modalOne_extract_text_ocr_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>                
+            <form action="/">
+              <div class="tooltip">
+                <i class="fa fa-info-circle">
+                <span class="tooltiptext">It will extract text from pdf using ocr</span>
+                </i>
+              </div>
+              <h2 style="margin: -30px 0 10px;">Extract Text from PDF using OCR</h2>
+              <div>
+                <div class="1" class="tabcontent">
+                  <div>
+                    <h1>Action Input</h1>
+                      <div class="tooltip">
+                        <i class="fa fa-info-circle">
+                        <span class="tooltiptext">Enter the location of pdf file containing text to be exracted</span>
+                        </i>
+                      </div>
+                    <label style="position: relative;left: -4%;"><b>Enter Source Pdf Path</b></label>
+                    <input type="file">
+                      <div class="tooltip">
+                        <i class="fa fa-info-circle">
+                        <span class="tooltiptext">Enter the location of output file</span>
+                        </i>
+                      </div>
+                    <label style="position: relative;left: -4%;"><b>Enter Destination File Path </b></label>
+                    <input type="file">
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                    <label > <b>Make Instance Invisible</b></label><br>
+                      </div>
+                     <div>
+                       <h1>Action Output</h1>
+                          <div class="tooltip">
+                             <i class="fa fa-info-circle">
+                             <span class="tooltiptext">Intermediate variable</span>
+                             </i>
+                         </div>
+                    <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                    <input type="text" name="psw">
+                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+                    <label > <b>This Action is Enable</b></label><br>
+                    <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                     </div>
+              </div>
+            </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<!-- extract pages from pdf -->
+<div id="modalOne_extract_page_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>       
+            <form action="/">
+              <div class="tooltip">
+                <i class="fa fa-info-circle">
+               <span class="tooltiptext">It will extract pages from pdf</span>
+               </i>
+              </div>
+            <h2 style="margin: -30px 0 10px;">Extract Pages from PDF</h2>           
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>                 
+                    <div class="tooltip">
+                      <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the starting page number for extraction</span>
+                      </i>
+                    </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Start Page Number</b></label>
+                  <input type="number">
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                    <span class="tooltiptext">Enter the ending page number for extraction to end</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter End Page Number </b></label>
+                  <input type="number">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+               </div>
+                 <div>
+                   <h1>Action Output</h1>
+                     <div class="tooltip">
+                       <i class="fa fa-info-circle">
+                       <span class="tooltiptext">Intermediate variable</span>
+                       </i>
+                     </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+              <div>
+                <div class="2" class="tabcontent">
+                  <div>
+                    <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                    <input type="text">
+                    <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                    <input type="text">
+                  </div>                 
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+ <!-- convert any file to pdf --->
+ <div id="modalOne_any_to_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+           </div>
+                 
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will convert any(text/ jpg/ docx) file to pdf</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Convert Any File to PDF</h2>
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>                                   
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of any(text/ jpg/ docx) to be converted</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Source File Path</b></label>
+                  <input type="file">
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where new PDF file will be stored</span>
+                    </i>
+                   </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
+                  <input type="file">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label> <b>Make Instance Invisible</b></label><br>
+                </div>
+                   <div>
+                     <h1>Action Output</h1>
+                       <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">Intermediate variable</span>
+                          </i>
+                       </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<!-- convert word file to pdf --->
+<div id="modalOne_word_to_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+          </div>                 
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+               <span class="tooltiptext">It will convert word file to pdf</span>
+              </i>
+            </div>
+           <h2 style="margin: -30px 0 10px;">Convert Word to PDF</h2>           
+            <div>
+              <div id="class" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>                                    
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of word file to be converted</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Source Word Path</b></label>
+                  <input type="file">
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where output pdf file will be stored</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
+                  <input type="file">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                </div>
+                  <div>
+                    <h1>Action Output</h1>
+                      <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">Intermediate variable</span>
+                          </i>
+                      </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="class" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>                 
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<!-- EXCEL TO PDF -->
+<div id="modalOne_excel_to_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>       
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+               <span class="tooltiptext">It will convert excel file to pdf</span>
+              </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Convert Excel to PDF</h2>            
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of excel file to be converted</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Source Excel Path</b></label>
+                  <input type="file">
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where new PDF file will be stored</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
+                  <input type="file">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                </div>
+                <div>
+                  <h1>Action Output</h1>
+                    <div class="tooltip">
+                          <i class="fa fa-info-circle">
+                            <span class="tooltiptext">Intermediate variable</span>
+                          </i>
+                    </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- GIF to PDF -->
+<div id="modalOne_gif_to_pdf" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>                 
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+               <span class="tooltiptext">It will convert gif file to pdf</span>
+              </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Convert GIF to PDF</h2>            
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+            <div class="tooltip">
+               <i class="fa fa-info-circle">
+                 <span class="tooltiptext">Enter the location of GIF file to be converted</span>
+               </i>
+            </div>
+
+            <label style="position: relative;left: -4%;"><b>Enter Source Gif Path</b></label>
+            <input type="file">
+            <div class="tooltip">
+               <i class="fa fa-info-circle">
+                 <span class="tooltiptext">Enter the location where new PDF file will be stored</span>
+               </i>
+             </div>
+            <label style="position: relative;left: -4%;"><b>Enter Destination Pdf Path </b></label>
+            <input type="file">
+            <input type="checkbox" name="vehicle1" style="width: 10%;">
+            <label > <b>Make Instance Invisible</b></label><br>
+            </div>
+            
+            <div>
+              <h1>Action Output</h1>
+                <div class="tooltip">
+                   <i class="fa fa-info-circle">
+                     <span class="tooltiptext">Intermediate variable</span>
+                   </i>
+                </div>
+             <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+             <input type="text" name="psw">
+             <input type="checkbox" name="vehicle1" style="width: 10%;">
+             <label > <b>This Action is Enable</b></label><br>
+             <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+             <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+          </div>
+        </div>
+      </div>
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- PDF TO WORD -->
+ <div id="modalOne_pdf_to_word" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>                 
+          <form action="/">
+            <div class="tooltip">
+            <i class="fa fa-info-circle">
+              <span class="tooltiptext">It will convert pdf file to word</span>
+            </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Convert PDF to Word</h2>
+            <div>
+              <div class="1" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>
+                    <div class="tooltip">
+                      <i class="fa fa-info-circle">
+                        <span class="tooltiptext">Enter the location of PDF file to be converted</span>
+                     </i>
+                    </div>
+
+                <label style="position: relative;left: -4%;"><b>Enter Source Pdf Path</b></label>
+                <input type="file">
+                <div class="tooltip">
+                  <i class="fa fa-info-circle">
+                    <span class="tooltiptext">Enter the location where new word file will be stored</span>
+                  </i>
+                </div>
+                <label style="position: relative;left: -4%;"><b>Enter Destination Word Path </b></label>
+                <input type="file">
+                <input type="checkbox" name="vehicle1" style="width: 10%;">
+                <label > <b>Make Instance Invisible</b></label><br>
+                </div>
+                <div>
+                  <h1>Action Output</h1>
+                  <div class="tooltip">
+                     <i class="fa fa-info-circle">
+                        <span class="tooltiptext">Intermediate variable</span>
+                     </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="2" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>                  
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<!-- PDF TO EXCEL -->
+<div id="modalOne_pdf_to_excel" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <div class="tab">
+              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+            </div>                 
+          <form action="/">
+            <div class="tooltip">
+              <i class="fa fa-info-circle">
+                <span class="tooltiptext">It will convert pdf file to excel</span>
+              </i>
+            </div>
+            <h2 style="margin: -30px 0 10px;">Convert PDF to Excel</h2>
+            <div>
+              <div id="class" class="tabcontent">
+                <div>
+                  <h1>Action Input</h1>                 
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location of pdf file to be converted</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Source Pdf Path</b></label>
+                  <input type="file">
+                  <div class="tooltip">
+                    <i class="fa fa-info-circle">
+                      <span class="tooltiptext">Enter the location where new excel file will be stored</span>
+                    </i>
+                  </div>
+                  <label style="position: relative;left: -4%;"><b>Enter Destination Excel Path </b></label>
+                  <input type="file">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>Make Instance Invisible</b></label><br>
+                </div>
+                <div>
+                  <h1>Action Output</h1>
+                    <div class="tooltip">
+                       <i class="fa fa-info-circle">
+                         <span class="tooltiptext">Intermediate variable</span>
+                       </i>
+                    </div>
+                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+                  <input type="text" name="psw">
+                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+                  <label > <b>This Action is Enable</b></label><br>
+                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="class" class="tabcontent">
+                <div>
+                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+                  <input type="text">
+                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+                  <input type="text">
+                  </div>
+                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<script type="text/javascript" src="JQuery/popup.js"></script>
+<script src="JQuery/jquery-1.12.4.js"></script>
+<script src="JQuery/jquery-ui.js"></script>
+<script>
+$( function() {
+$("#draggable").draggable();
+$("#droppable").droppable({
+  drop: function( event, ui ) {
+    $( this )
+      .addClass( "ui-state-highlight" )
+      .find( "p" )
+        .html( "Dropped!" );
+  }
+});
+} );
+
+let dropdownBtn = document.getElementsByClassName("dropdown-btn");
+
+for(let i = 0;i < dropdownBtn.length;i++){
+dropdownBtn[i].addEventListener("click",(e)=>{
+	// alert("click");
+  dropdownBtn[i].classList.toggle("showDrop");
+});
+}
+
+// Drag n Drop Starts
+$(document).ready(function() {
+  var dragOpts = {
+      containment: "document",
+      helper: "clone",
+      opacity: 0.7,
+      zIndex: 10000,
+      appendTo: "body"
+},
+dropOpts = {
+  tolerance: "fit",
+  drop: function(e, ui) {
+    if (ui.draggable.hasClass("drag-drop")) {
+      var cloneElement = ui.draggable.clone(),
+        cloneDragOpts = {
+          containment: ".drag-n-drop-div"
+        };
+      // cloneElement.removeAttr("id");
+      cloneElement.removeClass("drag-drop");
+      cloneElement.addClass("open");
+      // cloneElement.addClass("button_filter");
+      cloneElement
+        .css({
+          position: "absolute",
+          top: ui.offset.top - $(this).offset().top,
+          left: ui.offset.left - $(this).offset().left
+        })
+        .draggable(cloneDragOpts);
+      $(this).append(cloneElement);
+    }
+  }
+};
+
+$(".drag-drop").each(function(index) {
+$(this).draggable(dragOpts);
+});
+
+$(".drag-n-drop-div").droppable(dropOpts);
+});
+//Drag n Drop Ends
+</script>
+<!-- <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    var tab = document.getElementsByClassName(cityName);
+    for (i=0; i<tab.length; i++){
+    	tab[i].style.display = "block";
+    }
+    evt.currentTarget.className += " active";
+  }
+</script> -->
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+</body>
+</html>
