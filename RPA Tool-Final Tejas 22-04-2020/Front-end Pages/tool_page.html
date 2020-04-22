@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+
+	  <title>Seqelstring RPA Tool</title>
+
+	  <script src="JQuery/jquery.min.js"></script>
+
+	  <!-- Direct network link/ Internet necessary -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+	  <link rel="stylesheet" href="JQuery/jquery-ui.css">
+	  <link rel="stylesheet" href="css/tool_page.css">
+	  <link rel="stylesheet" type="text/css" href="css/pop-up.css">
+	  <!-- Adding master page -->
+	  <!-- <script src="jquery-lib.js"></script> -->
+	  <script type="text/javascript" src="JQuery/jquery-3.4.1.min.js"></script>
+	  <script type="text/javascript">
+	    $(document).ready(function(){ 
+	    $.get("master_page.html", function(data) {
+	      $("#header").html(data);
+	      });
+	  });
+	  </script>
+	 
+</head>
+<body>
+	<div id="header"></div>
+	<div id="container">
+	<div class="flex-container">
+		<!-- <div id="droppable" class="ui-widget-header drag-n-drop-div" style="width:80% ; height: 80vh; border: solid 1px; margin-top:97px; position: relative;"> -->
+		<div id="droppable" class="ui-widget-header drag-n-drop-div" style="width:64%; height: 60vh; border: solid 1px; position: absolute; right: 19%; top: 100px;">
+		  	<!-- <p>Drop here</p> -->
+	  	</div>
+	  	<!-- <div class="form-group" id="textarea">
+		    <label for="log">Log: </label>
+		    <textarea class="form-control" rows="5" id="log"></textarea>
+		</div> -->
+		<div class="column_right">
+			<ul>
+				<!-- CATEGORY HEAD -->
+				<a href="#" class="column_links dropdown-btn" data-modal="modalOne"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">Excel</a>
+				<!-- DROPDOWN CONTAINER -->
+					<div class="dropdown-container">
+						<!-- FUNCTIONALITIES -->
+			        	<a href="#" class="drag-drop button_filter"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Filter Excel</a>
+			        	<a href="#" class="drag-drop button_maxcolumn"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Max Column</a>
+			        	<a href="#" class="drag-drop button_maxrow"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Max Row</a>
+			        	<a href="#" class="drag-drop button_vlookupsamesheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Vlookup on same excel</a>
+			        	<a href="#" class="drag-drop button_copy_data_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Copy data from one sheet to another</a>
+			        	<a href="#" class="drag-drop button_roundoff_column"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Roundoff values of columns</a>
+			        	<a href="#" class="drag-drop button_remove_duplicate"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Remove duplicates</a>
+			        	<a href="#" class="drag-drop button_password"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Password</a>
+			        	<a href="#" class="drag-drop button_sum_if"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Sum If</a>
+			        	<a href="#" class="drag-drop button_pivot_table"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Pivot table</a>
+			        	<a href="#" class="drag-drop button_paste_special"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Paste special</a>
+			        	<a href="#" class="drag-drop button_move_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Move excel</a>
+			        	<a href="#" class="drag-drop button_create_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Create sheet</a>
+			        	<a href="#" class="drag-drop button_del_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete sheet</a>   
+			        	<a href="#" class="drag-drop button_sel_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Select sheet</a>   
+			        	<a href="#" class="drag-drop button_rename_sheet"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Rename sheet</a>   
+			        	<a href="#" class="drag-drop button_del_column"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete column</a>   
+			        	<a href="#" class="drag-drop button_del_row_col"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete all rows and columns</a>
+
+			        	<a href="#" class="drag-drop button_copy_data"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Copy data from one excel to another</a>   
+			        	<a href="#" class="drag-drop button_v_lookup"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Vlookup on two excel</a>   
+			        	<a href="#" class="drag-drop button_search_value"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Search value in excel</a>   
+			        	<a href="#" class="drag-drop button_change_header"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Change header name</a>   
+			        	<a href="#" class="drag-drop button_formula"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Formula</a>   
+			        	<a href="#" class="drag-drop button_del_row"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete row</a>   
+			        	<a href="#" class="drag-drop button_col_datatype"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Change datatype of column</a>   
+			        	<a href="#" class="drag-drop button_excel_to_csv"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Convert Excel into CSV</a>   
+			        	<a href="#" class="drag-drop button_create_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Create Excel</a>   
+			        	<a href="#" class="drag-drop button_open_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Open Excel</a>   
+			        	<a href="#" class="drag-drop button_del_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Delete Excel</a>   
+			        	<a href="#" class="drag-drop button_rename_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Rename Excel</a>   
+			        	<a href="#" class="drag-drop button_copy_excel"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Copy Excel</a>   
+			        	<a href="#" class="drag-drop button_read_cell_data"><img src="assets/excel_icon.png" height="20px" width="20px" style="margin-right: 5px;">Read cell data</a>   
+        			</div> 
+    			<!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">SAP</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">E-mail</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">PDF</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">Files</a>
+			    <!-- CATEGORY HEAD -->
+			    <a href="#" class="column_links dropdown-btn"><img src="assets/folder_icon.png" height="25px" width="25px" style="margin-right: 10px;">FTP</a>
+		    </ul>
+		</div>
+
+		<div class="popup">
+			<div id="modalOne_filter" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will filter the inputs in the column specified by the user.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Filter</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value to be filtered.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter value to filter</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the column number.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter the column number</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant</b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		              </div>
+		            </div>
+		          </div>
+		        </form>
+		        </div>
+		      </div>
+		    </div>
+			<div id="modalOne_maxcolumn" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will give max columns.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Max Column</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">It will give max columns.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>s
+		    </div>
+		    <div id="modalOne_maxrow" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>       
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will give max rows.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Max Row</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">It will give max rows.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_vlookupsamesheet" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>     
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will provide vlookup on same excel file.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Vlookup on same Excel file</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value to searched</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter value to searched</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the range to searched</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter range to searched</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value index</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter value index</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+
+		                  
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_copy_data_sheet" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		          
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will copy data from one excel sheet to another excel sheet.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Copy data from one excel sheet to another</h2>
+
+		            
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the source from where the content is to be copied.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Source Sheet Name</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the destination where the content is to be pasted.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Destination Sheet Name</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the cell range from where the data is to be selected.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Cell Range</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_roundoff_column" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will round off values of a column.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Round off values of column</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the column number to round off.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter column number</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the decimal number to round off.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter decimal place</b></label>
+		                  <input type="text" list="browsers" name="browser">
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		              </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_remove_duplicate" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		           <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will remove duplicate values of a column.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Remove duplicate</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the column number to remove duplicate.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter column number</b></label>
+		                  <input type="text" list="browsers" name="browser">
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		              </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_password" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		           
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will hash the password.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Password</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the keyword for hashing.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter keyword for hashsing</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the decimal number to round off.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter password</b></label>
+		                  <input type="text" list="browsers" name="browser">
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		              </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_sum_if" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>     
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will provide values to calculate sum if.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Sum if</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value to cell where sum if initializes.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter position of start cell</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value to cell where sum if ends.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter position of end cell</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value of output cell</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter position of output cell</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+
+		                  
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 5</b></label>
+		                  <input type="text">
+
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_pivot_table" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>     
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will provide values to create pivot table.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Pivot table</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value for column name.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter value as column name</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value of index as column name.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter index as column name</b></label>
+		                  <input type="text" list="browsers" name="browser">
+		                          
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_paste_special" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>     
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will do paste special on mentioned sheet.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Paste special</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the position of sheet.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet number</b></label>
+		                  <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Store instant</b></label>
+		                  <input type="text" name="psw">
+
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label><b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_move_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		           <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Move the Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Move Excel</h2>
+
+		           
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the current location of excel sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Current Excel Path</b></label>
+
+		                   <input type="file">
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the new location of excel sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter New Excel Path </b></label>
+		                  <input type="file">
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_create_sheet" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will create the sheet in excel file</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Create Sheet</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+
+		                   <input type="text">
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    <div id="modalOne_del_sheet" class="modal">
+			    <div class="modal-content">
+			        <div class="contact-form">
+			          <a class="close">&times;</a>
+			          	<div class="tab">
+			              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+			              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+			           	</div>         
+			        <form action="/">
+			            <div class="tooltip">
+				            <i class="fa fa-info-circle">
+				              <span class="tooltiptext">It deletes sheet from excel</span>
+				            </i>
+			            </div>
+			            <h2 style="margin: -30px 0 10px;">Delete Sheet</h2>
+			            <div>
+				            <div class="1" class="tabcontent">
+				                <div>
+					                <h1>Action Input</h1>
+					                <div class="tooltip">
+					                  <i class="fa fa-info-circle">
+					                    <span class="tooltiptext">Enter the name of sheet to be deleted</span>
+					                  </i>
+					                </div>
+				                	<label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+					                <input type="text">
+				                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+				                  	<label > <b>Make Instance Invisible</b></label><br>
+				                </div>
+				                <div>
+				                  <h1>Action Output</h1>
+				                  <div class="tooltip">
+				                          <i class="fa fa-info-circle">
+				                            <span class="tooltiptext">Intermediate variable</span>
+				                          </i>
+				                  </div>
+				                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+				                  <input type="text" name="psw">
+				                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+				                  <label > <b>This Action is Enable</b></label><br>
+
+				                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+				                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+				                </div>
+				            </div>
+				        </div>
+			            <div>
+			            	<div class="2" class="tabcontent">
+				                <div>
+				                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+				                  <input type="text">     
+				                </div>
+			                	<button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+			                </div>
+			              </div>
+			            </div>
+			        </form>
+			        </div>
+			    </div>
+		    </div>
+		    <div id="modalOne_sel_sheet" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will select the sheet</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Select Sheet</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of sheet to be selected</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+		                  <input type="text">
+
+		                
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+		                </div>
+
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_rename_sheet" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Rename the Sheet</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Rename Sheet</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the current name of sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Current Sheet Name</b></label>
+
+		                   <input type="text">
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Give new name</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter New Name</b></label>
+		                  <input type="text"> 
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">The file with new name</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+		                </div>
+
+		           
+		                 
+		                 
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_del_column" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will delete the column</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Delete Column</h2>
+
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                 
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter name of the column to be deleted</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Column Name</b></label>
+		                  <input type="text">
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                </div>
+
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_del_row_col" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will delete all rows and columns of sheet</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Delete All From Sheet</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of the sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+
+		                   <input type="text">
+		                 
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+		                </div>
+
+
+
+		                <div>
+		                 
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_read_cell_data" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		            <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will read cell data.</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Read Cell Data</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">It will read cell data from the range mentioned.</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Cell Range</b></label>
+		                   <input type="text" list="browsers" name="browser">
+
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">It will Open the Excel File</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="button" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_copy_data" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It copies data from one excel to another</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Copy Data</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of Source Excel</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Souce Excel Path</b></label>
+
+		                   <input type="file">
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the range of the cells to be copied</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Cell Range</b></label>
+		                  <input type="text">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of Destination Excel</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Destination Excel Path</b></label>
+		                  <input type="file">
+		                  
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		            
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+
+		                    
+		                </div>                
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_v_lookup" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		           <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will perfrom Vlookup</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Vlookp on Two Excel Files</h2>
+
+		           
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                 
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the cell range in Excel1 file containing data against which lookup happens</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Cell Range</b></label>
+		                  <input type="text">
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value in cell range to be looked up</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter the Value</b></label>
+		                  <input type="text">
+
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the index of value to be fetched from Excel2</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Index of Value</b></label>
+		                  <input type="text">
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+		                   
+		                    <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                   <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+		                  </div>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_search_value" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will search value in Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Search in Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+
+		                 <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Path</b></label>
+		                   <input type="file">
+
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of sheet</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Sheet Name</b></label>
+		                   <input type="text">
+
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the value to be searched</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Value</b></label>
+		                   <input type="text">
+		                  
+		               
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_change_header" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will change header in Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Change Header in Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Path</b></label>
+
+		                   <input type="file">
+		                  
+		                
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of old header</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Old Header Name</b></label>
+
+		                   <input type="text">
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of new header</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter New Header Name</b></label>
+
+		                   <input type="text">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_formula" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Apply the Formula</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Apply Formula</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the Formula to be applied</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Formula</b></label>
+
+		                   <input type="text">
+		                  
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the range of cells for applying formula</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Cell Range</b></label>
+
+		                   <input type="text">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_del_row" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will delete the row</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Delete Row</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                 
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the row to be deleted</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Row Index</b></label>
+		                  <input type="text">
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                </div>
+
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_col_datatype" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will change data type of column</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Change Datatype of Column</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                    
+		                    <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter column name in this format:__ </span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Column Name</b></label>
+		                  <input type="text">
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter new datatype of column </span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Data Type</b></label>
+		                  <input type="text">
+
+
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+		                </div>
+
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_excel_to_csv" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Convert Excel File to CSV Format</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Convert Excel to CSV</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the input excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Path</b></label>
+
+		                   <input type="text">
+		                  
+		                 
+
+		                   <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location where output csv file will be stored</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter CSV Path</b></label>
+
+		                   <input type="file">
+		                  
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of csv file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter CSV Name</b></label>
+
+		                   <input type="text">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_create_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		           <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will create Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Create Excel</h2>
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of Excel</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Name</b></label>
+
+		                   <input type="text">
+		                  
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location where excel file should be created </span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Path</b></label>
+
+		                   <input type="file">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                   <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_open_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Open the Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Open Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the name of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Name</b></label>
+
+		                   <input type="text">
+		                  
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Path</b></label>
+
+		                   <input type="text">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne-del_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Delete the Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Delete Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  
+		                  
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of excel file to be deleted</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Excel Path</b></label>
+
+		                   <input type="file">
+
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_rename_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+		               
+		          <div class="tab">
+		            <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		            <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		          </div>
+
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It will Rename the Excel File</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Rename Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the current location of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Current Excel Path</b></label>
+		                   <input type="file">
+		                  
+
+		                    <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the new location of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter New Excel Path</b></label>
+		                   <input type="text">
+
+		                    <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the new name of excel file</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter New Excel Name </b></label>
+		                   <input type="text">
+
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  </div>
+		                  
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="modalOne_copy_excel" class="modal">
+		      <div class="modal-content">
+		        <div class="contact-form">
+		          <a class="close">&times;</a>
+
+		          <div class="tab">
+		              <button class="tablinks" onclick="openCity(event, '1')">General</button>
+		              <button class="tablinks" onclick="openCity(event, '2')">Exception Handling</button>
+		            </div>
+		                 
+		          <form action="/">
+		            <div class="tooltip">
+		            <i class="fa fa-info-circle">
+		              <span class="tooltiptext">It copies one excel file to another</span>
+		            </i>
+		            </div>
+		            <h2 style="margin: -30px 0 10px;">Copy Excel</h2>
+
+		            
+
+		            <div>
+		              <div class="1" class="tabcontent">
+		                <div>
+		                  <h1>Action Input</h1>
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of Source Excel</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Souce Excel Path</b></label>
+		                  <input type="file">
+
+		                  
+
+		                  <div class="tooltip">
+		                    <i class="fa fa-info-circle">
+		                      <span class="tooltiptext">Enter the location of Destination Excel</span>
+		                    </i>
+		                  </div>
+
+		                  <label style="position: relative;left: -4%;"><b>Enter Destination Excel Path</b></label>
+		                  <input type="file">
+		                  
+
+		                    <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>Make Instance Invisible</b></label><br>
+		                </div>
+		                <div>
+		                  <h1>Action Output</h1>
+		                  <div class="tooltip">
+		                          <i class="fa fa-info-circle">
+		                            <span class="tooltiptext">Intermediate variable</span>
+		                          </i>
+		                  </div>
+		                  <label style="position: relative;left: -4%;"><b>Store Instant </b></label>
+		                  <input type="text" name="psw">
+		                  <input type="checkbox" name="vehicle1" style="width: 10%;">
+		                  <label > <b>This Action is Enable</b></label><br>
+
+		                  <button type="submit" class="btn" style=" position: relative; left: 70%;">OK</button>
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+
+		            <div>
+		              <div class="2" class="tabcontent">
+		                <div>
+		            
+		                  <label style="position: relative;left:0%;"><b>Excepion 1</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 2</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 3</b></label>
+		                  <input type="text">
+
+		                  <label style="position: relative;left:0%;"><b>Excepion 4</b></label>
+		                  <input type="text">
+
+		                    
+		                </div>
+
+
+
+		                
+		                  <button type="button" class="btn cancel" onclick="closeForm()" style=" position: relative; left: 70%;">CANCEL</button>
+		                </div>
+		              </div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+		</div><!-- popup ends here -->
+	</div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="JQuery/popup.js"></script>
+<script src="JQuery/jquery-1.12.4.js"></script>
+<script src="JQuery/jquery-ui.js"></script>
+<script>
+$( function() {
+$("#draggable").draggable();
+$("#droppable").droppable({
+  drop: function( event, ui ) {
+    $( this )
+      .addClass( "ui-state-highlight" )
+      .find( "p" )
+        .html( "Dropped!" );
+  }
+});
+} );
+
+let dropdownBtn = document.getElementsByClassName("dropdown-btn");
+
+for(let i = 0;i < dropdownBtn.length;i++){
+dropdownBtn[i].addEventListener("click",(e)=>{
+	// alert("click");
+  dropdownBtn[i].classList.toggle("showDrop");
+});
+}
+
+// Drag n Drop Starts
+$(document).ready(function() {
+  var dragOpts = {
+      containment: "document",
+      helper: "clone",
+      opacity: 0.7,
+      zIndex: 10000,
+      appendTo: "body"
+},
+dropOpts = {
+  tolerance: "fit",
+  drop: function(e, ui) {
+    if (ui.draggable.hasClass("drag-drop")) {
+      var cloneElement = ui.draggable.clone(),
+        cloneDragOpts = {
+          containment: ".drag-n-drop-div"
+        };
+      // cloneElement.removeAttr("id");
+      cloneElement.removeClass("drag-drop");
+      cloneElement.addClass("open");
+      // cloneElement.addClass("button_filter");
+      cloneElement
+        .css({
+          position: "absolute",
+          top: ui.offset.top - $(this).offset().top,
+          left: ui.offset.left - $(this).offset().left
+        })
+        .draggable(cloneDragOpts);
+      $(this).append(cloneElement);
+    }
+  }
+};
+
+$(".drag-drop").each(function(index) {
+$(this).draggable(dragOpts);
+});
+
+$(".drag-n-drop-div").droppable(dropOpts);
+});
+//Drag n Drop Ends
+</script>
+<!-- <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    var tab = document.getElementsByClassName(cityName);
+    for (i=0; i<tab.length; i++){
+    	tab[i].style.display = "block";
+    }
+    evt.currentTarget.className += " active";
+  }
+</script> -->
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+</body>
+</html>
