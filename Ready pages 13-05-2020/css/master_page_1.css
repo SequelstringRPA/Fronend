@@ -1,0 +1,67 @@
+#toppanel{
+	background-color: #201E4D;
+	color: white;
+	overflow: hidden;
+	display: inline-block;
+	height: 12vh;
+	min-height: 70px;
+	position: fixed;
+}
+
+#name{
+	display: inline-block;
+	color: white;
+	padding-left: 27%;
+}
+
+
+#company_logo{
+	float: left;
+	width: 12%;
+	padding: 5px;
+}
+
+#welcome_user{
+	display: inline;
+    color: white;
+    padding-top: 28px;
+    padding-left: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+#client_logo{
+	width: 12%;
+	padding: 5px;
+}
+
+#logout{
+	margin: 14px;
+    float: right;
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+}
+
+#left_panel{
+	width: 15%;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	position: fixed;
+	display: block;
+	background-color: #201E4D;
+	height: 100vh;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	top: 12vh;
+}
+
+#column_links{
+	color: white;
+	padding: 7px 10px;
+	text-decoration: none;
+	margin-top: 10px;
+	display: block;
+	border-bottom: 1px solid;
+}
